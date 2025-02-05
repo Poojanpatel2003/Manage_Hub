@@ -139,7 +139,7 @@ const CustomerDetails = () => {
       };
 
       try {
-        const response = await fetch('https://managehub.onrender.com/api/invoices', {
+        const response = await fetch('https://manage-hub.onrender.com/api/invoices', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
