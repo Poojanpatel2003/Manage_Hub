@@ -30,7 +30,7 @@ const LoginPage = ({ handleLogin }) => {
             handleLogin();
 
             // Navigate to the dashboard after successful login
-            navigate('/dashboard');
+            navigate('/customer-management');
         } catch (error) {
             console.error("Login Error:", error.response?.data || error.message);
             setError(error.response?.data?.message || 'Invalid email or password.');
