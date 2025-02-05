@@ -26,7 +26,7 @@ const CustomerDetails = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`https://managehub.onrender.com/api/userinfo/${userInfoId}`, {
+        const response = await fetch(`https://manage-hub.onrender.com/api/userinfo/${userInfoId}`, {
           headers: { 'Authorization': `${localStorage.getItem('token')} `}
         });
         const data = await response.json();
@@ -41,7 +41,7 @@ const CustomerDetails = () => {
 
     const getProductDetails = async () => {
       try {
-        const response = await fetch("https://managehub.onrender.com/api/inventory", {
+        const response = await fetch("https://manage-hub.onrender.com/api/inventory", {
           headers: { 'Authorization':` ${localStorage.getItem('token')}` }
         });
         const data = await response.json();
@@ -53,7 +53,7 @@ const CustomerDetails = () => {
 
     const fetchTransactions = async () => {
       try {
-        const response = await fetch(`https://managehub.onrender.com/api/invoices?userInfoId=${userInfoId}`, {
+        const response = await fetch(`https://manage-hub.onrender.com/api/invoices?userInfoId=${userInfoId}`, {
           headers: { 'Authorization': `${localStorage.getItem('token')}` }
         });
         const data = await response.json();

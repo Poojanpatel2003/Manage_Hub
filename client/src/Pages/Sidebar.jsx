@@ -21,7 +21,7 @@ const Sidebar = ({handleLogOutState}) => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get('https://managehub.onrender.com/api/auth/profile', {
+        const response = await axios.get('https://manage-hub.onrender.com/api/auth/profile', {
           headers: {
             'Authorization': localStorage.getItem('token'), // Add token from localStorage
           },

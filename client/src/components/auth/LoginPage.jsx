@@ -18,7 +18,7 @@ const LoginPage = ({ handleLogin }) => {
         setError(null);
 
         try {
-            const response = await axios.post('https://managehub.onrender.com/api/auth/login', { email, password });
+            const response = await axios.post('https://manage-hub.onrender.com/api/auth/login', { email, password });
             const { token } = response.data;
             localStorage.setItem('token', token);
             // Invoke the passed handleLogin function on successful login

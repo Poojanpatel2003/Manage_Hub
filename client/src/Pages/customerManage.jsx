@@ -23,7 +23,7 @@ const CustomerManagement = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await fetch('https://managehub.onrender.com/api/userinfo', {
+      const response = await fetch('https://manage-hub.onrender.com/api/userinfo', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': token, // Add token directly
@@ -49,7 +49,7 @@ const CustomerManagement = () => {
       try {
         if (editIndex !== null) {
           // Update existing customer
-          await fetch(`https://managehub.onrender.com/api/userinfo/${customers[editIndex]._id}`, {
+          await fetch(`https://manage-hub.onrender.com/api/userinfo/${customers[editIndex]._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const CustomerManagement = () => {
         } else {
           console.log(formData)
           // Add new customer
-          await fetch('https://managehub.onrender.com/api/userinfo', {
+          await fetch('https://manage-hub.onrender.com/api/userinfo', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const CustomerManagement = () => {
 
   const handleDeleteCustomer = async (index) => {
     try {
-      await fetch(`https://managehub.onrender.com/api/userinfo/${customers[index]._id}`, {
+      await fetch(`https://manage-hub.onrender.com/api/userinfo/${customers[index]._id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': token,

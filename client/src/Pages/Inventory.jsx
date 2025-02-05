@@ -25,7 +25,7 @@ const Inventory = () => {
   // Fetch products from the backend API
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://managehub.onrender.com/api/inventory', {
+      const response = await fetch('https://manage-hub.onrender.com/api/inventory', {
         method: 'GET',
         headers: {
           'Authorization': `${token}`
@@ -55,7 +55,7 @@ const Inventory = () => {
       try {
         console.log(parseInt(sold || 0))
         const method = editingItem ? 'PUT' : 'POST';
-        const endpoint = editingItem ? `https://managehub.onrender.com/api/inventory/${editingItem._id}` : 'https://managehub.onrender.com/api/inventory';
+        const endpoint = editingItem ? `https://manage-hub.onrender.com/api/inventory/${editingItem._id}` : 'https://manage-hub.onrender.com/api/inventory';
         const response = await fetch(endpoint, {
           method,
           headers: {
@@ -116,7 +116,7 @@ const Inventory = () => {
   // Handle deleting an item
   const handleDelete = async (itemId) => {
     try {
-      const response = await fetch(`https://managehub.onrender.com/api/inventory/${itemId}`, {
+      const response = await fetch(`https://manage-hub.onrender.com/api/inventory/${itemId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `${token}`
